@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* === GLOBAL STYLES === */
@@ -112,10 +113,8 @@ h1 {
 /* === COLUMNS === */
 .columns {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
   flex-wrap: wrap;
-  align-items: flex-start;
+  gap: 20px;
   justify-content: space-between;
 }
 
@@ -123,14 +122,31 @@ h1 {
   background: rgba(98, 108, 123, 0.562);
   border-radius: 12px;
   padding: 16px;
-  flex: 1;
-  min-width: 300px;
   max-height: 70vh;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  animation: fadeSlideIn 0.4s ease;
   transition: all 0.3s ease;
+  animation: fadeSlideIn 0.3s ease;
+}
+
+/* Default: Mobile (1 column) */
+.column {
+  flex: 1 1 100%;
+}
+
+/* Tablet (2 columns) */
+@media (min-width: 600px) {
+  .column {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* Desktop (3 columns) */
+@media (min-width: 1024px) {
+  .column {
+    flex: 1 1 calc(33.33% - 13.33px);
+  }
 }
 
 .column::-webkit-scrollbar {
@@ -247,58 +263,5 @@ h1 {
   }
   to {
     opacity: 1;
-  }
-}
-
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 1024px) {
-  .columns {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .column {
-    width: 100%;
-    max-height: unset;
-  }
-}
-
-@media (max-width: 768px) {
-  .task-input,
-  .filters {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .task-input input,
-  .task-input select,
-  .task-input button,
-  .filters button {
-    width: 100%;
-  }
-
-  .task-card {
-    font-size: 14px;
-  }
-
-  .task-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .task-input input,
-  .task-input select {
-    font-size: 14px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons button {
-    width: 100%;
   }
 }
