@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   padding: 30px;
   color: #fdc191f1;
-  animation: fadeBodyIn 4s ease-in-out;
+  animation: fadeBodyIn 2s ease-in-out;
 }
 
 body::before {
@@ -38,7 +38,7 @@ body::before {
   max-width: 1080px;
   margin: auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  animation: fadeSlideIn 10s ease;
+  animation: fadeSlideIn 0.3s ease;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.3s, transform 0.8s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .task-input button:hover {
@@ -92,8 +92,6 @@ h1 {
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-
-
 
 .filters button {
   padding: 8px 12px;
@@ -131,9 +129,8 @@ h1 {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  animation: fadeSlideIn 5s ease;
-  transition: all 0.4s ease, max-height 0.6s ease;
-
+  animation: fadeSlideIn 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .column::-webkit-scrollbar {
@@ -154,8 +151,7 @@ h1 {
   position: relative;
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeSlideIn 0.5s ease forwards;
-  
+  animation: fadeSlideIn 0.3s ease forwards;
 }
 
 .task-card:hover {
@@ -305,20 +301,4 @@ h1 {
   .buttons button {
     width: 100%;
   }
-}
-.column {
-  background: rgba(98, 108, 123, 0.562);
-  border-radius: 12px;
-  padding: 16px;
-  flex: 1;
-  min-width: 300px;
-  max-height: 70vh;
-  overflow-y: auto;
-
-  /* Smooth transition for resizing */
-  transition: all 0.4s ease;
-
-  /* Hide scrollbar */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
