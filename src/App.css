@@ -111,12 +111,17 @@ h1 {
 }
 
 /* === COLUMNS === */
+
 .columns {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
 }
+
+
 
 .column {
   background: rgba(98, 108, 123, 0.562);
