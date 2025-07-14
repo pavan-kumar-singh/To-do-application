@@ -157,6 +157,10 @@ h1 {
 .column::-webkit-scrollbar {
   display: none;
 }
+body.no-scroll {
+  overflow: hidden;
+}
+
 
 .column h2 {
   text-align: center;
